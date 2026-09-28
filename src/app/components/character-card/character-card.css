@@ -1,17 +1,38 @@
-.main-container {
-  display: flex;
-  align-items: center;
-  width: 400px;
-  padding: 15px;
-  margin: 10px;
+:host {
+  display: block;
+  max-width: 100%;
 }
 
-img {
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: ghostwhite;
+  align-items: center;
+  padding: 15px;
+}
+
+.main-container > img.mat-mdc-card-image {
   height: 150px;
   width: 150px;
   border-radius: 50%;
+  border: 1px solid black;
   object-fit: cover;
-  object-position: center;
-  padding: 10px;
-  border: 1px solid lightgray;
+  flex-shrink: 0;
+}
+
+mat-card-header {
+  padding: 16px 0;
+  text-align: center;
+}
+
+mat-card-content {
+  min-height: 0;
+  overflow: auto;
+  overflow-wrap: anywhere;
 }

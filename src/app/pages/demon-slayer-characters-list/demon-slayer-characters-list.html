@@ -1,5 +1,6 @@
 <p>demon-slayer-characters-list works!</p>
 
+<div class="characters-list">
 @for (item of characterList; track item.id) {
   <app-character-card
     [id]="item.id"
@@ -11,3 +12,5 @@
 } @empty {
   <p>no hay elemento para mostrar</p>
 }
+
+</div>

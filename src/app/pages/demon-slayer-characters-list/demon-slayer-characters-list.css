@@ -1,0 +1,8 @@
+:host { display: block; padding: 16px; }
+
+.characters-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
