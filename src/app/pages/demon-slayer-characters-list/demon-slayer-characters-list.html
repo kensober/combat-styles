@@ -1,16 +1,20 @@
 <p>demon-slayer-characters-list works!</p>
 
-<div class="characters-list">
+<label class="variant-selector">
+  Estilo de imagen
+  <select [(ngModel)]="cardType">
+    <option value="image-filled">Imagen ancha</option>
+    <option value="image-rounded">Imagen redonda</option>
+  </select>
+</label>
+
 @for (item of characterList; track item.id) {
   <app-character-card
-    [id]="item.id"
-    [name]="item.name"
-    [description]="item.description"
-    [image]="item.img">
+    [data]="item"
+    [type]="cardType"
+  >
   </app-character-card>
 
 } @empty {
   <p>no hay elemento para mostrar</p>
 }
-
-</div>

@@ -1,9 +1,15 @@
-<mat-card class="main-container" appearance="outlined">
-  <img mat-card-image [src]="image()" [alt]="name()">
+<mat-card class="main-container">
   <mat-card-header>
-    <mat-card-title>{{ id() }} - {{ name() }}</mat-card-title>
+    <img
+      [ngClass]="type() === characterCardType.FILLED ? 'image-filled' : 'image-rounded'"
+      [src]="data().img"
+      [alt]="data().name">
   </mat-card-header>
   <mat-card-content>
-    <p>{{ description() }}</p>
+    <h3>{{ data().id }} - {{ data().name }}</h3>
+    <p>{{ data().description }}</p>
   </mat-card-content>
+  <section class="dynamic-content">
+    <ng-content></ng-content>
+  </section>
 </mat-card>

@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+}
+
+mat-card-content {
+  display: flex;
+  gap: 24px;
+}
+
+.style-details {
+  flex: 1;
+  min-width: 0;
+  padding-right: 16px;
+  border-right: 1px solid #bdbdbd;
+}
+
+.characters {
+  flex: 2;
+  min-width: 0;
+}
+
+img {
+  width: 50px;
+  height: auto;
+}
+
+p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  mat-card-content {
+    flex-direction: column;
+  }
+
+  .style-details {
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 1px solid #bdbdbd;
+  }
+}

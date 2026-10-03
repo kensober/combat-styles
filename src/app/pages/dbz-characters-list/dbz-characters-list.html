@@ -1,0 +1,15 @@
+<p>dbz-characters-list works!</p>
+
+<app-primary-character-card>
+  <p>Progra WEB V2</p>
+</app-primary-character-card>
+
+@for (item of getDbzCharacterList(); track item.id) {
+  <app-character-card
+    [data]="item"
+    [type]="characterCardType.FILLED">
+    <p>Progra WEB v1</p>
+  </app-character-card>
+} @empty {
+  <p>no hay elemento para mostrar</p>
+}

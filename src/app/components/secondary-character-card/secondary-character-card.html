@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-content>
+    <section class="style-details">
+      <img [src]="data().image" [alt]="data().name">
+      <h2>{{ data().name }}</h2>
+      <p>{{ data().description }}</p>
+    </section>
+    <section class="characters" aria-label="Personajes del estilo de combate">
+      @for (character of data().combat_style_character; track character.id) {
+        <article>
+          <h3>{{ character.id }} - {{ character.name }}</h3>
+          <p>{{ character.description }}</p>
+        </article>
+      } @empty {
+        <p>No hay personajes para mostrar.</p>
+      }
+    </section>
+  </mat-card-content>
+</mat-card>
